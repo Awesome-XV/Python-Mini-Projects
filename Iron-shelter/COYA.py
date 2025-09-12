@@ -32,12 +32,12 @@ def main():
         print("There was a nuclear fallout and half of the world has been destroyed and we need your knowledge to make the nukes again or at least a few missiles.")
         result = input("Do you accept this task? Yes or No")
 
-    if (result == "Yes") or (result == "yes"):
-        handle("Dead")
-    elif (result == "No") or (result == "no"):
-        handle(True)
-    else:
-        handle("Fail")
+        if (result == "Yes") or (result == "yes"):
+            handle(True)
+        elif (result == "No") or (result == "no"):
+            handle("Fail")
+        else:
+            handle("Fail")
     answer = input("Now you find a empty tank do you want to command it?").lower()
     if answer == "yes":
         print("You have chosen to command the tank.")
@@ -70,7 +70,17 @@ def main():
             print("Wait for green and press 'c' within 500ms otherwise you will die")
             time.sleep(7.5)
             print(f"{RED}RED{RESET}")
-            time.sleep(random.uniform(2, 5)) 
+
+            red_duration = random.uniform(2, 5)
+            red_start = time.time()
+            while time.time() - red_start < red_duration:
+                if msvcrt.kbhit():
+                    key = msvcrt.getch().decode('utf-8').lower()
+                    if key == 'c':
+                        print("You pressed too early. The missile has been misfired and you blew up.")
+                        handle("Dead")
+                        return
+
             print(f"{GREEN}GREEN{RESET}")
 
             start_time = time.time()
@@ -94,6 +104,7 @@ def main():
 
         reaction()
         missile_building()
+        print("Well looks like you managed to do it")
     elif answer == "no":
         print("You BETRAY us after all of this so you deserve this death")
         handle("Dead")

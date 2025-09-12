@@ -70,8 +70,34 @@ Features:
 - No external libraries required (unless some scripts include optional extras)
 
 ## How to run
-1. Open a terminal or command prompt.
-2. Navigate to the project folder:
-   `cd "c:\Users\sudhi\OneDrive - Cypress_Fairbanks_ISD\csp\new stuff"`
-3. Run any script, for example:
-   `python grades.py`
+
+### Option 1: Download Executables (Recommended)
+**🚀 No Python installation required!**
+
+1. Go to the [Releases](../../releases) page
+2. Download the latest release ZIP file
+3. Extract the executables
+4. Double-click any `.exe` file to run
+5. Follow the on-screen prompts
+
+**Available Executables:**
+- `GradeCalculator.exe` - Grade Calculator
+- `NumberGuessing.exe` - Number Guessing Game  
+- `PhotosynthesisChecker.exe` - Photosynthesis Checker
+- `DiceRoller.exe` - Dice Sum Simulator
+- `TrafficLight.exe` - Traffic Light Simulator
+- `IronShelter-COYA.exe` - Choose Your Own Adventure Game
+
+### Option 2: Run Python Source Code
+**Requires Python 3.6+ installed**
+
+1. Clone or download this repository
+2. Open a terminal or command prompt
+3. Navigate to the project folder:
+   ```
+   cd "c:\Users\sudhi\OneDrive - Cypress_Fairbanks_ISD\csp\new stuff"
+   ```
+4. Run any script, for example:
+   ```
+   python grades.py
+   ```
