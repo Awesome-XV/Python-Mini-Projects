@@ -71,3 +71,9 @@ elif (percent < 0) or (percent > 100):
     print("Error, or you either you did really good or really bad")
 else:
     print("Learn how to type numbers, I assume you can't if you got this message so I say your failing")
+
+try:
+    from pause_on_exit import pause_on_exit
+    pause_on_exit()
+except Exception:
+    pass

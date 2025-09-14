@@ -60,3 +60,9 @@ while ran != x:
     if x == total:
         break
     
+try:
+    from pause_on_exit import pause_on_exit
+    pause_on_exit()
+except Exception:
+    pass
+

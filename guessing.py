@@ -27,3 +27,9 @@ while guess != number:
         print("You got the right answer in ", guesses, "guesses try again to get it first try")
     else:
         print("Error")
+        
+try:
+    from pause_on_exit import pause_on_exit
+    pause_on_exit()
+except Exception:
+    pass

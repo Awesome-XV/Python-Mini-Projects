@@ -112,3 +112,10 @@ def main():
         handle("Fail")
 
 main()
+
+try:
+    # when frozen into an exe the helper should be available in the same folder
+    from pause_on_exit import pause_on_exit
+    pause_on_exit()
+except Exception:
+    pass

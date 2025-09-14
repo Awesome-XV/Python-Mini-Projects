@@ -49,3 +49,9 @@ elif (lightLevel == "Low") or (co2Level == "Low"):
     print("Photosynthesis is limited")
 else:
     print("The condition are unclear make sure that you put a captial letter")
+
+try:
+    from pause_on_exit import pause_on_exit
+    pause_on_exit()
+except Exception:
+    pass
