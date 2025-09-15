@@ -33,44 +33,49 @@ class Spinner:
         sys.stdout.write("\r" + " " * (len(self.message) + 2) + "\r")
         sys.stdout.flush()
 
-e = input("Whats your grade in English? ")
-m = input("Whats your grade in Math? ")
-s = input("Whats your grade in Science? ")
-h = input("Whats your grade in History? ")
-el = input("Whats your grade in Elective? ")
+e = input("Whats your number grade in English? ")
+m = input("Whats your number grade in Math? ")
+s = input("Whats your number grade in Science? ")
+h = input("Whats your number grade in History? ")
+el = input("Whats your number grade in Elective? ")
 
 spinner = Spinner("Calculating...")
 spinner.start()
 
 time.sleep(2)
 
-e = int(e)
-m = int(m)
-s = int(s)
-h = int(h)
-el = int(el)
-
-percent = (e + m + s + h + el) / 5
-
-spinner.stop()
-
-print("---------Printing Result--------")
-print("Here is your percent: ", percent)
-
-if percent < 45:
-    print("Failing you better do something")
-elif percent <= 60:
-    print("passed somehow u dont deserve caps")
-elif percent <= 75:
-    print("You did good (not really you still dont even deserve caps)")
-elif percent <= 85:
-    print("You did really good (Not Really)")
-elif percent <= 100:
-    print("You did exellent (Not Really you did very good)")
-elif (percent < 0) or (percent > 100):
-    print("Error, or you either you did really good or really bad")
+try:
+    e = int(e)
+    m = int(m)
+    s = int(s)
+    h = int(h)
+    el = int(el)
+except ValueError:
+    print("Error: Please enter a number for the grades.")
+    print("Exiting...")
+    spinner.stop()
 else:
-    print("Learn how to type numbers, I assume you can't if you got this message so I say your failing")
+    percent = (e + m + s + h + el) / 5
+
+    spinner.stop()
+
+    print("---------Printing Result--------")
+    print("Here is your percent: ", percent)
+
+    if percent < 45:
+        print("Failing you better do something")
+    elif percent <= 60:
+        print("passed somehow u dont deserve caps")
+    elif percent <= 75:
+        print("You did good (not really you still dont even deserve caps)")
+    elif percent <= 85:
+        print("You did really good (Not Really)")
+    elif percent <= 100:
+        print("You did exellent (Not Really you did very good)")
+    elif (percent < 0) or (percent > 100):
+        print("Error, or you either you did really good or really bad")
+    else:
+        print("Learn how to type numbers, I assume you can't if you got this message so I say your failing")
 
 try:
     from pause_on_exit import pause_on_exit
