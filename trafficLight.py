@@ -1,10 +1,10 @@
-x = input("Whats the traffic light color?")
+x = input("Whats the traffic light color?").lower().title()
 
-if x == "green":
+if x == "Green":
 	print("Go what you waiting for")
-elif x == "yellow":
+elif x == "Yellow":
 	print("You could slow down and wait.")
-elif x == "red":
+elif x == "Red":
 	print("Stop your about to run a red light.")
 else:
 	print("The standard colors are green, yellow, and red and this program is exiting please run it again.")

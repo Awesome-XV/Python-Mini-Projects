@@ -67,15 +67,15 @@ else:
     elif percent <= 60:
         print("passed somehow u dont deserve caps")
     elif percent <= 75:
-        print("You did good (not really you still dont even deserve caps)")
+        print("You did good (not really but try to earn caps)")
     elif percent <= 85:
-        print("You did really good (Not Really)")
+        print("You did really good (maybe you deserve caps)")
     elif percent <= 100:
-        print("You did exellent (Not Really you did very good)")
+        print("You did exellent (You deserve caps)")
     elif (percent < 0) or (percent > 100):
         print("Error, or you either you did really good or really bad")
     else:
-        print("Learn how to type numbers, I assume you can't if you got this message so I say your failing")
+        print("Are you sure that you typed a number? The default is that you are failing so you're failing.")
 
 try:
     from pause_on_exit import pause_on_exit

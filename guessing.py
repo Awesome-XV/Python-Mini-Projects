@@ -32,11 +32,8 @@ else:
             guesses += 1
         elif guess < number:
             guess = input("Try guessing higher this time ")
-            try:
-                guess = int(guess)
-            except ValueError:
-                print("Error: Please enter a number.")
-                break
+            guess = int(guess)
+            guesses += 1
         elif (guess == number) and (guess >= 0):
             print("You got the right answer in ", guesses, "guesses try again to get it first try")
         else:

@@ -46,7 +46,7 @@ def main():
         print("So you continue your journey and you are ambushed by enemy forces.")
         answer = input("How do you want to defend? Run or Fight").lower()
         if answer == "fight":
-            answer = input("How do you fight the enemies? Make this choice wisely there is only 1 right answer any others and you will die.").lower()
+            answer = input("How do you fight the enemies? Make this choice wisely as there is only 1 right answer any others and you will die.").lower()
             if answer == "gun":
                 handle(True)
             else:

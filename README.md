@@ -71,7 +71,15 @@ Features:
 
 ## How to run
 
-### Option 1: Download Executables (Recommended)
+## Option 1: Go to replit and run (Recommended)
+**No need to install anything just have a replit account**
+
+1. Go to https://replit.com/@Awesome-XV/Python-Mini-Projects
+2. Then remix the project
+3. Then run it
+4. Play around with it
+
+### Option 2: Download Executables ( Seconday Reccomendation) Only if you can't do the first option
 **🚀 No Python installation required!**
 
 1. Go to the [Releases](../../releases) page
@@ -88,7 +96,7 @@ Features:
 - `TrafficLight.exe` - Traffic Light Simulator
 - `IronShelter-COYA.exe` - Choose Your Own Adventure Game
 
-### Option 2: Run Python Source Code
+### Option 3: Run Python Source Code
 **Requires Python 3.6+ installed**
 
 1. Clone or download this repository

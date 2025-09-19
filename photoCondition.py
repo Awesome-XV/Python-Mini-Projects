@@ -33,8 +33,8 @@ class Spinner:
         sys.stdout.write("\r" + " " * (len(self.message) + 2) + "\r")
         sys.stdout.flush()
 
-lightLevel = input("What is the light level: High or Low?")
-co2Level = input("What is the CO2 level: High or Low?")
+lightLevel = input("What is the light level: High or Low?").lower().title()
+co2Level = input("What is the CO2 level: High or Low?").lower().title()
 
 spinner = Spinner("Calculating...")
 spinner.start()
